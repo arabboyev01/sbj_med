@@ -1,0 +1,70 @@
+.button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 20px;
+    border-radius: 10px;
+    color: var(--color-blue);
+    border: 1px solid var(--color-light-blue);
+    background-color: var(--color-secondary);
+    transition: color,border-color,background-color, 0.3s ease;
+    
+    svg{
+        flex-shrink: 0;
+        transition: color 0.3s ease;
+    }
+
+    &:hover{
+        background-color: var(--color-blue);
+    }
+
+    &:hover .text{
+        color: #fff;
+    }
+
+    &:hover svg{
+        color: var(--color-light-blue);
+    }
+
+    &.contained{
+        background-color: var(--color-blue);
+        border-color: var(--color-blue);
+        color: #fff;
+
+        &:hover{
+            background-color: var(--color-secondary);
+            border-color: var(--color-light-blue);
+            color: var(--color-blue);
+        }
+    
+        &:hover .text{
+            color: var(--color-blue);
+        }
+    
+        &:hover svg{
+            color: var(--color-blue);
+        }
+    }
+}
+
+.text{
+    display: inline-block;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+@media only screen and (max-width: 1050px) {
+    .button{
+        padding: 10px 15px;
+
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .text{
+        font-size: 16px;
+    }
+}

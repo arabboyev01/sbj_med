@@ -1,0 +1,31 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.top{
+    display: flex;
+    gap: 24px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 382px;
+}
+
+.card{
+    flex-grow: 1;
+}
+
+.middle{
+    display: flex;
+    gap: 24px;
+}
+
+.bottom{
+    display: flex;
+    gap: 24px;
+}

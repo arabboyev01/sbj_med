@@ -1,0 +1,146 @@
+.card {
+  width: 100%;
+  max-width: 788px;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+
+.red {
+  background: var(--linear-red);
+}
+
+.peach {
+  background: var(--linear-peach);
+}
+.mint {
+  background: var(--linear-mint);
+}
+.belge {
+  background: var(--linear-belge);
+}
+.green {
+  background: var(--linear-green);
+}
+.purple {
+  background: var(--linear-purple);
+}
+.medium-purple {
+  background: var(--linear-medium-purple);
+}
+.blue {
+  background: var(--linear-blue);
+}
+.sky {
+  background: var(--linear-sky);
+}
+.teal {
+  background: var(--linear-teal);
+}
+.pink {
+  background: var(--linear-pink);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 40px;
+  max-width: 788px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: bold;
+  color: var(--color-text-dark);
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-dark);
+  font-weight: 300;
+  font-family: Product Sans Light, sans-serif;
+}
+
+.link {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 1540px) {
+  .content {
+    padding: 25px 0 25px 25px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+
+  .image {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+
+  .image {
+    width: 180px;
+    height: 235px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .image {
+    width: 150px;
+    height: 180px;
+  }
+
+  .content {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .text {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .link {
+    align-self: center;
+    padding: 12px 22px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}

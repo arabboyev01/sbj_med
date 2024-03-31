@@ -1,0 +1,18 @@
+.title{
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+.slider{
+    display: flex;
+    flex-grow: 1;
+    height: auto;
+}
+
+.card{
+    flex-grow: 1;
+}

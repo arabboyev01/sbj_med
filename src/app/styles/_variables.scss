@@ -1,0 +1,50 @@
+:root{
+    // colors
+    --color-blue: #1464c0;
+    --color-dark-blue: #073784;
+    --color-dark-blue-800: #073784cc;
+    --color-second-dark-blue: #0555a2;
+    --color-light-blue: #97c6eb;
+    --color-second-sky-blue: #07bfff;
+    --color-grey: #848d9f;
+    --color-bg-grey: #f2f5f9;
+    --color-secondary: #eff6fb;
+    --color-dark: #00183c;
+    --color-text-dark: #26364b;
+    --color-sky-blue: #0fa8e4;
+    --color-purple: #3f3b76;
+    --color-green: #13ab7b;
+    --color-mint: #53a3ae;
+    --color-brown: #c8a388;
+    --color-grey: #6e7d8a;
+
+    // fonts
+    --font-family: "Product Sans", "Arial", sans-serif;
+
+    // swiper styles
+    --swiper-pagination-bullet-width: 60px;
+    --swiper-pagination-bullet-border-radius: 50px;
+    --swiper-pagination-bullet-inactive-color: rgba(20, 100, 192,0.9);
+    --swiper-pagination-color: #1464c0;
+    --swiper-pagination-bottom: 80px;
+
+    // linear gradient backgrounds
+    --linear-red: linear-gradient(135deg,#f5d0d0,#f6e6e6 70%,#e2b9bb);
+    --linear-peach: linear-gradient(135deg,#e6beaf,#f7dcd1 70%,#e4bcab);
+    --linear-mint: linear-gradient(135deg,#bfecf3,#bff9ef 50%,#beeaf2);
+    --linear-belge: linear-gradient(135deg,#e6cfb9,#f5e7d7 50%,#ddc2a7);
+    --linear-green: linear-gradient(135deg,#a4e3c1,#c0efd6 50%,#9dd2b6);
+    --linear-purple: linear-gradient(135deg,#d2aed5,#e2c4f1 50%,#b98fd2);
+    --linear-medium-purple: linear-gradient(135deg,#dcdff2,#e4e6f6 60%,#c4c7e4);
+    --linear-blue: linear-gradient(135deg,#c8e0f3,#9bbbe2);
+    --linear-sky: linear-gradient(135deg,#ddf0ff,#aed2f9);
+    --linear-teal: linear-gradient(135deg,#afeedd,#78d9Bd);
+    --linear-pink: linear-gradient(135deg,#f7d8eb,#eba3ca); 
+}
+
+@media (max-width: 630px) {
+    :root {
+        --swiper-pagination-bullet-width: 40px;
+        --swiper-pagination-bottom: 20px;
+    }
+}

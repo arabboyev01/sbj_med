@@ -1,0 +1,135 @@
+.card{
+    max-width: 382px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 30px rgba(38, 54, 75,0.1);
+}
+
+.title{
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+}
+
+.text{
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+}
+
+.wrapper{
+    height: 350px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.image{
+    object-fit: cover;
+}
+
+.badge{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background: linear-gradient(#13ab7b,#7ab66d);
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.body{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.status{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: var(--color-bg-grey);
+}
+
+.star{
+    color: #f8c35c;
+}
+
+.status-text{
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+}
+
+.bold{
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-blue);
+}
+
+.button{
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1540px) {
+    .wrapper{
+        height: 300px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .status{
+        border-radius: 8px;
+    }
+
+    .text, .button span, .status-text, .bold,.badge{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .wrapper{
+        height: 250px;
+    }
+
+    .title{
+        font-size: 18px;
+    }
+
+    .text, .button span, .status-text, .bold,.badge{
+        font-size: 14px;
+    }
+
+    .button{
+        padding: 8px 15px;
+        gap: 8px;
+        
+        svg{
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

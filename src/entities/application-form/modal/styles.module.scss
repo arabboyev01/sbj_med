@@ -1,0 +1,36 @@
+.root {
+    overflow: hidden;
+  
+    &.done {
+      .modal {
+        transform: translateY(0%);
+      }
+    }
+  }
+
+  .modal {
+    --offset: 25px;
+    max-width: 1600px;
+    width: calc(100% - 18px);
+    border-radius: var(--offset);
+    background-color: var(--color-gray-100);
+    transition: transform var(--duration);
+    margin-bottom: 12px;
+  
+    @media (max-width: 576px) {
+      --offset: 15px;
+    }
+  }
+
+  .button{
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    align-items: center;
+    min-width: unset !important;
+    width: 24px;
+    height: 24px;
+  }

@@ -1,0 +1,22 @@
+.content{
+    ul{
+        padding-left: 40px;
+        list-style-type: disc;
+    }
+}
+
+.image{
+    height: auto;
+}
+
+.text{
+    h1,h2,h3,h4,h5,h6{
+        color: var(--color-text-dark);
+    }
+
+    p,li{
+        font-size: 20px;
+        line-height: 1.5;
+        color: var(--color-text-dark);
+    }
+}

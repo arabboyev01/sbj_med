@@ -1,0 +1,17 @@
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.card{
+    flex-basis: calc(100% / 3 - 16px);
+
+    @media (max-width: 1025px) {
+        flex-basis: calc(50% - 12px);
+    }
+    
+    @media (max-width: 625px) {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+.title{
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+}
+
+.image{
+    height: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .title{
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .galery{
+        .slider{
+            display: flex;
+        }
+    }
+
+    .image{
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .title{
+        font-size: 24px;
+    }
+}

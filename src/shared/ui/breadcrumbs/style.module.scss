@@ -1,0 +1,47 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 12px;   
+    flex-wrap: wrap; 
+}
+
+.link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255,0.7);
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.text{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-size: 20px;
+
+    span{
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .text{
+        font-size: 18px;
+    }
+    
+    .link{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .text{
+        font-size: 16px;
+    }
+    
+    .link{
+        font-size: 16px;
+    }
+}

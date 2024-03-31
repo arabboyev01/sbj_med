@@ -1,0 +1,25 @@
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media (max-width: 625px){
+        justify-content: center;
+    }
+}
+
+.card{
+    flex-basis: calc(25% - 18px);
+    
+    @media (max-width: 1225px){
+        flex-basis: calc(100% / 3 - 16px);
+    }
+    
+    @media (max-width: 850px){
+        flex-basis: calc(50% - 12px);
+    }
+    
+    @media (max-width: 625px){
+        flex-basis: 100%;
+    }
+}

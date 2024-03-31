@@ -1,0 +1,181 @@
+.blue {
+  background-color: var(--color-sky-blue);
+}
+
+.mint {
+  background-color: var(--color-mint);
+}
+
+.green {
+  background-color: var(--color-green);
+}
+
+.purple {
+  background-color: var(--color-purple);
+}
+
+.brown {
+  background-color: var(--color-brown);
+}
+
+.grey {
+  background-color: var(--color-grey);
+}
+
+.card {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 270px;
+}
+
+.large {
+  .content {
+    padding: 40px 0 40px 40px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px 0 20px 20px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.text {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.link {
+  margin-top: auto;
+  align-self: flex-start;
+
+  &.all {
+    color: #fff;
+  }
+
+  &.ordinary {
+    color: var(--color-text-dark);
+
+    &:hover {
+      background-color: var(--color-text-dark);
+      color: #fff;
+    }
+  }
+}
+
+.image {
+  align-self: flex-end;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 1540px) {
+  .large {
+    .content {
+      padding: 25px 0 25px 25px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    .text {
+      font-size: 18px;
+    }
+
+    .link {
+      &.ordinary {
+        border-radius: 8px;
+        padding: 12px 20px;
+      }
+    }
+
+    .image {
+      width: 280px;
+      height: 340px;
+    }
+  }
+
+  .content {
+    padding: 15px 0 15px 15px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+
+  .image {
+    width: 150px;
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .large {
+    .title {
+      font-size: 24px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+
+    .image {
+      width: 240px;
+      height: 300px;
+    }
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .large {
+    .title {
+      font-size: 18px;
+    }
+
+    .text {
+      font-size: 14px;
+    }
+
+    .image {
+      width: 150px;
+      height: 180px;
+    }
+
+    .content {
+      padding: 15px 0 15px 15px;
+    }
+  }
+}

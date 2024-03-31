@@ -1,0 +1,157 @@
+.hero{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background-color: var(--color-bg-grey);
+}
+
+.container{
+    display: flex;
+    gap: 24px;
+}
+
+.swiper{
+    overflow: hidden;
+    display: flex;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+.slide{
+    display: flex;
+}
+
+.right{
+    width: 382px;
+    flex-shrink: 0;
+}
+
+.header{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.header-image{
+    margin-bottom: 20px;
+}
+
+.title{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+.text{
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+
+    &:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+}
+
+.name{
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.contacts{
+    padding-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.contact{
+    flex-grow: 1;
+    width: unset;
+    height: 38px;
+    border-radius: 8px;
+
+    svg{
+        width: 18px;
+        height: 18px;
+    }
+
+    g{
+        opacity: 1 !important;
+    }
+
+    path{
+        stroke-width: 2 !important;
+    }
+}
+
+@media only screen and (max-width: 1540px) {
+    .right{
+        width: 320px;
+    }
+
+    .title{
+        font-size: 22px;
+    }
+
+    .text{
+        font-size: 18px;
+    }
+
+    .wrapper{
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .name{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .right{
+        display: flex;
+        width: 100%;
+    }
+
+    .header{
+        margin-right: 24px;
+        margin-bottom: 0;
+        max-width: 382px;
+    }
+
+    .aside{
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .right{
+        flex-direction: column;
+    }
+
+    .header{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
+}

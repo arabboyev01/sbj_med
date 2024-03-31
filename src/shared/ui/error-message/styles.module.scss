@@ -1,0 +1,47 @@
+.error{
+    padding-top: 40px;
+    padding-bottom: 100px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    text-align: center;
+}
+
+.title{
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+}
+
+@media only screen and (max-width: 1540px) {
+    .image{
+        width: 670px;
+        height: auto;
+    }
+
+    .title{
+        font-size: 28px;
+    }
+
+    .link{
+        font-size: 18px;
+        padding: 12px 20px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 24px;
+    }
+
+    .link{
+        font-size: 16px;
+    }
+}

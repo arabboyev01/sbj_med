@@ -1,0 +1,21 @@
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+}
+
+.card{
+    flex-basis: calc(50% - 12px);
+}
+
+@media only screen and (max-width:900px){
+    .list{
+        flex-direction: column;
+    }
+
+    .card{
+        flex-basis: 100%;
+        max-width: unset;
+    }
+}

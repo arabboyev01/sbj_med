@@ -1,0 +1,37 @@
+.bottom{
+    display: flex;
+    gap: 24px;
+}
+
+.left{
+    display: flex;
+    flex-basis: calc(50% - 12px);
+}
+
+.card-lg{
+    flex-grow: 1;
+}
+
+.right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    flex-basis: calc(50% - 12px);
+}
+
+.card-sm{
+    flex-grow: 1;
+    flex-basis: calc(50% - 12px);
+}
+
+@media only screen and (max-width: 1250px) {
+    .bottom{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .right{
+        flex-direction: column;
+    }
+}
