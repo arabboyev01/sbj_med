@@ -62,8 +62,8 @@ const Hero = () => {
             autoplay={{ delay: 3500 }}
           >
             {banners?.results?.map((el: BannerType) => 
-              <SwiperSlide className={styles.slide}>
-                <SwiperCard {...el}/>
+              <SwiperSlide className={styles.slide} key={el?.id}>
+                <SwiperCard {...el} />
               </SwiperSlide>
             )}
           </Swiper>

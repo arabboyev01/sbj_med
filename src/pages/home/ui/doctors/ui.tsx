@@ -40,7 +40,7 @@ const Doctors = () => {
         spaceBetween={24}
       >
         {data?.results?.map((item: DoctorType) => 
-          <SwiperSlide className={styles.slide}>
+          <SwiperSlide className={styles.slide} key={item?.id}>
             <DoctorCard className={styles.card} badge="Доктор недели" data={item} />
           </SwiperSlide>
         )}
