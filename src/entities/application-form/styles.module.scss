@@ -1,211 +1,228 @@
-.form{
-    padding: 32px;
-    border-radius: 20px;
-    border: 1px solid rgba(38, 54, 75,0.15);
+.form {
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(38, 54, 75, 0.15);
 
-    .button{
-        min-width: 200px;
-        justify-content: center;
+  .button {
+    min-width: 200px;
+    justify-content: center;
+  }
+
+  &.light {
+    background-color: #fff;
+  }
+
+  &.dark {
+    background: linear-gradient(
+      to bottom right,
+      var(--color-blue),
+      var(--color-second-dark-blue)
+    );
+
+    .title {
+      color: #fff;
     }
-    
-    &.light{
+
+    .text {
+      color: #fff;
+    }
+
+    .input {
+      background: rgba(255, 255, 255, 0.3);
+      color: #fff;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    .button {
+      background-color: var(--color-sky-blue);
+    }
+
+    .tab-wrapper {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .tab-button {
+      color: #fff;
+
+      &.active {
         background-color: #fff;
+        color: var(--color-sky-blue);
+      }
     }
-
-    &.dark{
-        background: linear-gradient(to bottom right, var(--color-blue), var(--color-second-dark-blue));
-
-        .title{
-            color: #fff;
-        }
-
-        .text{
-            color: #fff;
-        }
-
-        .input{
-            background: rgba(255, 255, 255, 0.3);
-            color: #fff;
-
-            &::placeholder{
-                color: rgba(255, 255, 255,0.3);
-            }
-        }
-
-        .button{
-            background-color: var(--color-sky-blue);
-        }
-
-        .tab-wrapper{
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
-        .tab-button{
-            color:#fff;
-        
-            &.active{
-                background-color: #fff;
-                color:  var(--color-sky-blue);
-            }
-        }
-    }
+  }
 }
 
-.header{
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.title {
+  text-align: left;
+  color: var(--color-text-dark);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .label {
+    flex-grow: 1;
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+.tab {
+  .tab-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 32px;
-}
+  }
 
-.title{
-    text-align: left;
-    color: var(--color-text-dark);
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 40px;
-    line-height: 1.4;
-    font-weight: bold;
-}
-
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 32px;
-}
-
-.top{
-    display: flex;
+  .tab-wrapper {
+    flex-grow: 1;
     flex-wrap: wrap;
-    gap: 20px;
-
-    .label{
-        flex-grow: 1;
-        flex-basis: calc(50% - 10px);
-    }
-}
-
-.tab{
-    .tab-header{
-        display: flex;
-        margin-bottom: 32px;
-    }
-    
-    .tab-wrapper{
-        flex-grow: 1;
-        flex-wrap: wrap;
-        display: flex;
-        padding: 4px;
-        border-radius: 12px;
-        background-color: var(--color-bg-grey);
-    }
-    
-    .tab-button{
-        flex-grow: 1;
-        flex-basis: calc(100% / 3);
-        padding: 13px 20px;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        font-size: 20px;
-        font-weight: 600;
-        border-radius: 12px;
-        color: rgba(38, 54, 75,0.8);
-    
-        &.active{
-            background-color: #fff;
-            color: var(--color-text-dark);
-            box-shadow: 0 2px 10px rgba(38, 54, 75,0.1);
-        }
-    }
-}
-
-.label{
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.text{
-    font-size: 20px;
-    color: var(--color-text-dark);
-    text-align: left;
-}
-
-.input{
-    padding: 16px;
-    font-size: 20px;
+    padding: 4px;
     border-radius: 12px;
-    border: 1px solid rgba(38, 54, 75,0.2);
+    background-color: var(--color-bg-grey);
+  }
+
+  .tab-button {
+    flex-grow: 1;
+    flex-basis: calc(100% / 3);
+    padding: 13px 20px;
+    background-color: transparent;
+    border: none;
     outline: none;
-    font-family: var(--font-family);
-    color: var(--color-text-dark);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 12px;
+    color: rgba(38, 54, 75, 0.8);
+
+    &.active {
+      background-color: #fff;
+      color: var(--color-text-dark);
+      box-shadow: 0 2px 10px rgba(38, 54, 75, 0.1);
+    }
+  }
 }
 
-.textarea{
-    resize: none;
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.error{
-    color: tomato;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 500;
+.text {
+  font-size: 20px;
+  color: var(--color-text-dark);
+  text-align: left;
+}
+
+.input {
+  padding: 16px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(38, 54, 75, 0.2);
+  outline: none;
+  font-family: var(--font-family);
+  color: var(--color-text-dark);
+}
+
+.date_input {
+  padding: 16px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(38, 54, 75, 0.2);
+  outline: none;
+  font-family: var(--font-family);
+  width: 100%;
+  margin: 32px 0 0 0;
+  background-color: rgb(69, 121, 190);
+  color: #fff;
+}
+
+.textarea {
+  resize: none;
+}
+
+.error {
+  color: tomato;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 1540px) {
-    .form{
-        padding: 24px;
-    }
+  .form {
+    padding: 24px;
+  }
 
-    .title{
-        font-size: 32px;
-    }
+  .title {
+    font-size: 32px;
+  }
 
-    .tab{
-        .tab-button{
-            font-size: 18px;
-        }
+  .tab {
+    .tab-button {
+      font-size: 18px;
     }
+  }
 
-    .input{
-        padding: 12px;
-        border-radius: 8px;
-        font-size: 18px;
-    }
+  .input {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+  }
 
-    .text{
-        font-size: 18px;
-    }
+  .text {
+    font-size: 18px;
+  }
 
-    .button{
-        span{
-            font-size: 18px;
-        }
+  .button {
+    span {
+      font-size: 18px;
     }
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .form{
-        padding: 25px 20px;
-    }
+  .form {
+    padding: 25px 20px;
+  }
 
-    .title{
-        font-size: 24px;
-    }
+  .title {
+    font-size: 24px;
+  }
 
-    .tab{
-        .tab-button{
-            font-size: 16px;
-        }
+  .tab {
+    .tab-button {
+      font-size: 16px;
     }
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .tab{
-        .tab-wrapper{
-            flex-direction: column;
-        }
+  .tab {
+    .tab-wrapper {
+      flex-direction: column;
     }
+  }
 }

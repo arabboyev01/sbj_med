@@ -189,6 +189,9 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     <p className={styles.error}>{errors.doctor.message}</p>
                   )}
                 </label>
+                <div>
+                  <input type="date" className={styles.date_input} />
+                </div>
               </TabItem>
             </div>
 
