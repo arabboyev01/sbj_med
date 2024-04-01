@@ -8,6 +8,11 @@ import styles from "./styles.module.scss";
 import { useScopedI18n } from "@/features/locales";
 import { opacityAnimation } from "@/shared/animation";
 import { motion } from "framer-motion";
+import { useQuery } from "react-query";
+import fetchData from "@/pages/api";
+import { DoctorType, ProgramListType } from "@/global/type";
+import { Services_List } from "@/global/servicde_list";
+import { ServiceType } from "@/pages/services/ui/services-list/config";
 
 type ApplicationFormType = {
   theme?: "dark" | "light";
@@ -34,6 +39,11 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
   const [value, setValue] = useState(1);
 
   const t = useScopedI18n("appointment");
+
+  const { data: doctors } = useQuery('doctors', () => fetchData('appointment/doctor/list/'))
+  const { data: programs } = useQuery('programs', () => fetchData('appointment/program/list/'))
+
+  const services_list: ServiceType[] = Services_List(t)
 
   const onChangeHandler = useCallback((val: number) => setValue(val), []);
 
@@ -93,7 +103,7 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     type="button"
                     onClick={() => onChangeHandler(0)}
                   >
-                   {t('programs')}
+                    {t('programs')}
                   </button>
                   <button
                     className={clsx(
@@ -124,9 +134,14 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     className={clsx(styles.input)}
                     {...register("direction")}
                   >
-                    <option disabled value="">
+                    <option value="0">
                       {t("choose")}
                     </option>
+                    {programs?.results?.map((program: ProgramListType) => (
+                      <option key={program.id} value={program.id} style={{color: "#000"}}>
+                        {program.title_en}
+                      </option>
+                    ))}
                   </select>
                   {errors.direction && (
                     <p className={styles.error}>{errors.direction.message}</p>
@@ -140,9 +155,14 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     className={clsx(styles.input)}
                     {...register("service")}
                   >
-                    <option disabled value="">
+                    <option value="0">
                       {t("choose")}
                     </option>
+                    {services_list.map((doctor: ServiceType) => (
+                      <option key={doctor.id} value={doctor.id} style={{color: "#000"}}>
+                        {doctor.title}
+                      </option>
+                    ))}
                   </select>
                   {errors.service && (
                     <p className={styles.error}>{errors.service.message}</p>
@@ -156,9 +176,14 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     className={clsx(styles.input)}
                     {...register("doctor")}
                   >
-                    <option disabled value="">
+                    <option value="0">
                       {t("choose")}
                     </option>
+                    {doctors?.results?.map((doctor: DoctorType) => (
+                      <option key={doctor.id} value={doctor.id} style={{color: "#000"}}>
+                        {doctor.first_name} {doctor.last_name}
+                      </option>
+                    ))}
                   </select>
                   {errors.doctor && (
                     <p className={styles.error}>{errors.doctor.message}</p>
