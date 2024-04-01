@@ -32,7 +32,16 @@
         "comment": "Изоҳ",
         "submit": "Юбориш",
         "company": "Компания",
-        "position": "Позиция"
+        "position": "Позиция",
+        "fullName": "Full name",
+        "phoneNumber": "Phone number",
+        "detail": "Do you have a note for us?",
+        "service": "Select the available service type",
+        "doctor": "Choose a doctor",
+        "choose": "Choose",
+        "programs": "Choose a mediacal program",
+        "medical_services": "Medical Services",
+        "doctor_services": "Doctors' appointment"
     },
     "phone": {
         "call-center": "Cалл-марказ рақами",
@@ -48,7 +57,7 @@
     "all": "Хаммасини кўриш",
     "detailed": "Батафсил",
     "services": {
-        "title": "Хизматлар",
+        "title": "Services",
         "caption": "Бизнинг хизматлар",
         "cardiology": "Кардиология", 
         "cardiology_text": "Кардиология бўлимида сиз юқори малакали кардиолог шифокорлар текширувидан ўтишингиз мумкин.", 

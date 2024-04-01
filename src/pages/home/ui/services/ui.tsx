@@ -6,9 +6,6 @@ import { SectionHeader } from "@/entities/section-header";
 import { motion } from "framer-motion";
 import { containerAnimation } from "@/shared/animation";
 import { useI18n, useScopedI18n } from "@/features/locales";
-import fetchData from "@/pages/api";
-import { useQuery } from "react-query";
-import { ServicesType } from "@/global/type";
 
 const Services = () => {
   const t = useI18n();
@@ -45,8 +42,6 @@ const Services = () => {
     },
   ];
 
-  const { data: services } = useQuery('services', () => fetchData('appointment/spec/list/'))
-
   return (
     <div className={styles.sevices}>
       <div className="container-sm">
@@ -57,7 +52,7 @@ const Services = () => {
           whileInView="visible"
           variants={containerAnimation}
         >
-          {services?.results?.map((serv: ServicesType) => (
+          {services_list.map((serv) => (
             <ServiceCard className={styles.card} key={serv.id} {...serv} />
           ))}
         </motion.div>

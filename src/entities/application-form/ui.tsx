@@ -64,7 +64,7 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                 <input
                   className={clsx(styles.input)}
                   {...register("name")}
-                  placeholder={t("write")}
+                  placeholder={t("fullName")}
                 />
                 {errors.name && (
                   <p className={styles.error}>{errors.name.message}</p>
@@ -75,7 +75,7 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                 <input
                   className={clsx(styles.input)}
                   {...register("phone_number")}
-                  placeholder={t("write")}
+                  placeholder={t("phoneNumber")}
                 />
                 {errors.phone_number && (
                   <p className={styles.error}>{errors.phone_number.message}</p>
@@ -93,7 +93,7 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     type="button"
                     onClick={() => onChangeHandler(0)}
                   >
-                    Департментга ёзилиш
+                   {t('programs')}
                   </button>
                   <button
                     className={clsx(
@@ -103,7 +103,7 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     type="button"
                     onClick={() => onChangeHandler(1)}
                   >
-                    Хизматдан фойдаланиш
+                    {t('medical_services')}
                   </button>
                   <button
                     className={clsx(
@@ -113,19 +113,19 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     type="button"
                     onClick={() => onChangeHandler(2)}
                   >
-                    Доктор қабули
+                    {t('doctor_services')}
                   </button>
                 </div>
               </header>
               <TabItem value={value} index={0}>
                 <label className={clsx(styles.label, styles["label-select"])}>
-                  <span className={styles.text}>Направление</span>
+                  <span className={styles.text}>{t('programs')}</span>
                   <select
                     className={clsx(styles.input)}
                     {...register("direction")}
                   >
                     <option disabled value="">
-                      Выбирать
+                      {t("choose")}
                     </option>
                   </select>
                   {errors.direction && (
@@ -135,13 +135,13 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
               </TabItem>
               <TabItem value={value} index={1}>
                 <label className={clsx(styles.label, styles["label-select"])}>
-                  <span className={styles.text}>Услуга</span>
+                  <span className={styles.text}>{t("service")}</span>
                   <select
                     className={clsx(styles.input)}
                     {...register("service")}
                   >
                     <option disabled value="">
-                      Выбирать
+                      {t("choose")}
                     </option>
                   </select>
                   {errors.service && (
@@ -151,13 +151,13 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
               </TabItem>
               <TabItem value={value} index={2}>
                 <label className={clsx(styles.label, styles["label-select"])}>
-                  <span className={styles.text}>Врачи</span>
+                  <span className={styles.text}>{t("doctor")}</span>
                   <select
                     className={clsx(styles.input)}
                     {...register("doctor")}
                   >
                     <option disabled value="">
-                      Выбирать
+                      {t("choose")}
                     </option>
                   </select>
                   {errors.doctor && (
@@ -172,7 +172,7 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
               <textarea
                 className={clsx(styles.input, styles.textarea)}
                 {...register("message")}
-                placeholder={t("write")}
+                placeholder={t("detail")}
                 rows={3}
               />
               {errors.message && (
