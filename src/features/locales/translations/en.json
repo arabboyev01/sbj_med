@@ -41,7 +41,8 @@
         "choose": "Choose",
         "programs": "Choose a mediacal program",
         "medical_services": "Medical Services",
-        "doctor_services": "Doctors' appointment"
+        "doctor_services": "Doctors' appointment",
+        "date": "Choose a date"
     },
     "phone": {
         "call-center": "Cалл-марказ рақами",

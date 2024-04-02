@@ -41,7 +41,8 @@
         "choose": "Выбирать",
         "programs": "Медицинские программы",
         "medical_services": "Медицинские услуги",
-        "doctor_services": "Запись к врачу"
+        "doctor_services": "Запись к врачу",
+        "date": "Выберите дату"
     },
     "phone": {
         "call-center": "Номер колл-центра:",

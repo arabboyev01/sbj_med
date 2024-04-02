@@ -108,7 +108,7 @@
   .tab-button {
     flex-grow: 1;
     flex-basis: calc(100% / 3);
-    padding: 13px 20px;
+   padding: 13px 20px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -155,9 +155,17 @@
   outline: none;
   font-family: var(--font-family);
   width: 100%;
-  margin: 32px 0 0 0;
   background-color: rgb(69, 121, 190);
   color: #fff;
+  margin-top: 10px;
+}
+
+.date_input::-webkit-calendar-picker-indicator {
+  color: #fff !important;
+}
+
+.date_span {
+  margin: 32px 0 10px 0;
 }
 
 .textarea {
@@ -202,6 +210,8 @@
     }
   }
 }
+
+
 
 @media only screen and (max-width: 600px) {
   .form {

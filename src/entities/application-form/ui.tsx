@@ -189,7 +189,8 @@ export const ApplicationForm = ({ theme, modalClose }: ApplicationFormType) => {
                     <p className={styles.error}>{errors.doctor.message}</p>
                   )}
                 </label>
-                <div>
+                <div className={styles.date_span}>
+                  <span className={styles.text}>{t("date")}</span>
                   <input type="date" className={styles.date_input} />
                 </div>
               </TabItem>

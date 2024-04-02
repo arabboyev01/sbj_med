@@ -41,7 +41,8 @@
         "choose": "Танланг",
         "programs": "Медикал дастурлар",
         "medical_services": "Медикал хизматлар",
-        "doctor_services": "Докторлар қабули"
+        "doctor_services": "Докторлар қабули",
+        "date": "Санани танланг"
     },
     "phone": {
         "call-center": "Cалл-марказ рақами",
