@@ -71,8 +71,18 @@
 }
 
 @media only screen and (max-width: 500px) {
+    .nav {
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+    }
     .wrapper{
         text-align: center;
         flex-basis: 100%;
+        column-count: 2;
+        display: flex;
+        gap: 32px;
+        place-content: center;
+        text-align: left !important;
     }
 }

@@ -41,7 +41,7 @@ const FooterNav = () => {
 
   return (
     <div className={styles.nav}>
-      <div className={styles.wrapper}>
+      <div>
         <Link className={styles.logo} href={routing.home}>
           <Image
             src="/images/logo-white.svg"
