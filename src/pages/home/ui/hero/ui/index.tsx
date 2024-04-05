@@ -14,6 +14,7 @@ import { useScopedI18n } from "@/features/locales";
 import fetchData from "@/pages/api";
 import { useQuery } from "react-query";
 import { BannerType } from "@/global/type";
+import { data, sliceData } from "./data";
 
 const Hero = () => {
   const dispatch = useDispatch();
@@ -23,24 +24,11 @@ const Hero = () => {
   const st = useScopedI18n("services");
 
   const { data: banners } = useQuery('banner', () => fetchData('blog/banner/list/'))
+  const list = data(st)
 
-  const list = [
-    {
-      id: 1,
-      image: "/images/neurology.png",
-      text: st("neurology"),
-    },
-    {
-      id: 2,
-      image: "/images/cardiology.png",
-      text: st("cardiology"),
-    },
-    {
-      id: 3,
-      image: "/images/gynecology.png",
-      text: st("gynecology"),
-    },
-  ];
+  const todayIndex = Math.floor(new Date().getDate() / 3)
+
+  const todaySlice = sliceData(list, todayIndex);
 
 
   return (
@@ -61,7 +49,7 @@ const Hero = () => {
             modules={[Pagination, Autoplay]}
             autoplay={{ delay: 3500 }}
           >
-            {banners?.results?.map((el: BannerType) => 
+            {banners?.results?.map((el: BannerType) =>
               <SwiperSlide className={styles.slide} key={el?.id}>
                 <SwiperCard {...el} />
               </SwiperSlide>
@@ -106,7 +94,7 @@ const Hero = () => {
             </div>
           </motion.header>
           <div className={styles.aside}>
-            {list.map((el) => (
+            {todaySlice.map((el) => (
               <motion.div
                 className={styles.wrapper}
                 key={el.id}
