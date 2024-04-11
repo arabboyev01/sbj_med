@@ -37,7 +37,7 @@ const ServiceCard = ({
         <p className={styles.text}>{text}</p>
         <LinkButton
           className={styles.link}
-          href={routing.serviceBySlug("urolog")}
+          href={routing.serviceBySlug("urology")}
         >
           Подробнее
         </LinkButton>

@@ -18,6 +18,7 @@ const Services = () => {
       text: ts("urology_text"),
       image: "/images/medical/urology.png",
       variant: "red",
+      slug: "uralogy"
     },
     {
       id: 2,
@@ -25,6 +26,7 @@ const Services = () => {
       text: ts("neurology_text"),
       image: "/images/medical/neurology.png",
       variant: "mint",
+      slug: "uralogy"
     },
     {
       id: 3,
@@ -32,6 +34,7 @@ const Services = () => {
       text: ts("cardiology_text"),
       image: "/images/medical/cardiology.png",
       variant: "blue",
+      slug: "uralogy"
     },
     {
       id: 4,
@@ -39,6 +42,7 @@ const Services = () => {
       text: ts("gynecology_text"),
       image: "/images/medical/gynecology.png",
       variant: "medium-purple",
+      slug: "uralogy"
     },
   ];
 
