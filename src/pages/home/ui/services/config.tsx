@@ -6,4 +6,5 @@ export type ServiceType = {
   text: string;
   image: string;
   variant: BackgroundVariantType;
+  slug: string;
 };
