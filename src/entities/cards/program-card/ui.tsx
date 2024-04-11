@@ -19,17 +19,22 @@ import { Route } from '@/hooks/router'
 // };
 
 const ProgramCard = (props: ProgramListType) => {
-  const t = useI18n();
+  const t = useI18n()
 
   const { lang } = Route()
   const classes = clsx(
     styles.card,
     styles[props?.colors ?? "blue"],
     props.className,
-    styles["small"]
-  );
+    styles[props.size ?? "small"]
+  )
   const title: string = props[`title_${lang}` as keyof ProgramListType] as string
   const description: string = props[`desc_${lang}` as keyof ProgramListType] as string
+
+  const isLarge = (props.size ?? "small") === "large";
+
+  const width = isLarge ? 353 : 171;
+  const height = isLarge ? 424 : 200;
 
   return (
     <div className={classes}>
@@ -56,8 +61,8 @@ const ProgramCard = (props: ProgramListType) => {
         className={styles.image}
         src={props?.images[0]?.image}
         alt="Programs"
-        width={225}
-        height={270}
+        width={width}
+        height={height}
       />
     </div>
   );

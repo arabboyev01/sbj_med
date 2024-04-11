@@ -25,6 +25,7 @@ const Programs = () => {
                 key={el.id}
                 {...el}
                 descOn
+                size="large"
               />
             )}
           </div>

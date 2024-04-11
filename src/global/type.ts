@@ -56,6 +56,7 @@ export type ProgramListType = {
     modified: string;
     className?: string;
     descOn?: boolean
+    size?: string
 }
 export type BannerType = {
     id: number;

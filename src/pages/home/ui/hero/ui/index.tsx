@@ -30,7 +30,6 @@ const Hero = () => {
 
   const todaySlice = sliceData(list, todayIndex);
 
-
   return (
     <div className={styles.hero}>
       <div className={clsx("container-sm", styles.container)}>
