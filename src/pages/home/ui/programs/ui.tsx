@@ -4,7 +4,6 @@ import routing from "@/shared/routing";
 import { ProgramCard } from "@/entities/cards";
 import { useScopedI18n } from "@/features/locales";
 import fetchData from "@/pages/api";
-import { count } from "console";
 import { useQuery } from "react-query";
 import { ProgramListType } from "@/global/type";
 
