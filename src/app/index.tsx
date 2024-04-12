@@ -6,6 +6,7 @@ import "./styles/index.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 const queryClient = new QueryClient()
 
@@ -45,6 +46,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <QueryClientProvider client={queryClient}>
           <BaseLayout>
             <Component {...pageProps} />
+            <ReactQueryDevtools initialIsOpen={false} />
           </BaseLayout>
         </QueryClientProvider>
       </motion.div>

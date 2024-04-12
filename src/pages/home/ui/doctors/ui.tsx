@@ -1,17 +1,16 @@
-import { DoctorCard } from "@/entities/cards";
-import styles from "./styles.module.scss";
-import routing from "@/shared/routing";
-import { SectionHeader } from "@/entities/section-header";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import { useScopedI18n } from "@/features/locales";
-import { useQuery } from "react-query";
-import fetchData from "@/pages/api";
-import { DoctorType } from "@/global/type";
+import { DoctorCard } from "@/entities/cards"
+import styles from "./styles.module.scss"
+import routing from "@/shared/routing"
+import { SectionHeader } from "@/entities/section-header"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay } from "swiper/modules"
+import { useScopedI18n } from "@/features/locales"
+import { useQuery } from "react-query"
+import fetchData from "@/pages/api"
+import { DoctorType } from "@/global/type"
 
 const Doctors = () => {
-  const t = useScopedI18n("doctors");
-
+  const t = useScopedI18n("doctors")
   const { data } = useQuery('doctors', () => fetchData('appointment/doctor/list/?page=1&page_size=4'))
 
   return (
@@ -47,6 +46,5 @@ const Doctors = () => {
       </Swiper>
     </div>
   );
-};
-
-export default Doctors;
+}
+export default Doctors
