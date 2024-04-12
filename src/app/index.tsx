@@ -42,11 +42,11 @@ const App = ({ Component, pageProps }: AppProps) => {
           height={4}
           options={{ showSpinner: false }}
         />
-        <BaseLayout>
-          <QueryClientProvider client={queryClient}>
+        <QueryClientProvider client={queryClient}>
+          <BaseLayout>
             <Component {...pageProps} />
-          </QueryClientProvider>
-        </BaseLayout>
+          </BaseLayout>
+        </QueryClientProvider>
       </motion.div>
     </AnimatePresence>
   );

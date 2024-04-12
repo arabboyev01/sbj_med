@@ -57,10 +57,11 @@
 
 .text {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   color: var(--color-text-dark);
   font-weight: 300;
+  font-family: Product Sans Light, sans-serif;
 }
 
 @media only screen and (max-width: 1540px) {
