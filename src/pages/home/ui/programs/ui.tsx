@@ -10,7 +10,7 @@ import { ProgramListType } from "@/global/type";
 const Programs = () => {
   const t = useScopedI18n("programs");
 
-  const { data, refetch } = useQuery('programs', () => fetchData(`appointment/program/list/?page=1&page_size=5`))
+  const { data } = useQuery('programs', () => fetchData(`appointment/program/list/?page=1&page_size=5`))
 
   return (
     <div className={styles.programs}>

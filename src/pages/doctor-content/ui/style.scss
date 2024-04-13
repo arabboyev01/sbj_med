@@ -1,0 +1,38 @@
+.text {
+    padding-left: 40px;
+}
+
+.doctor_header {
+    display: flex;
+    max-width: 1550px;
+    margin: 0 auto;
+    flex-direction: row;
+    @media(max-width: 1550px){
+        padding-left: 70px;
+        padding-right: 30px;
+    }
+
+    @media(max-width: 990px){
+      flex-direction: column;
+      padding-left: 30px;      
+    }
+    .doctor_image {
+        flex: 0.3;
+
+        @media(max-width: 1550px){
+          flex: 0.4;
+        }
+
+        @media(max-width: 1024px){
+          flex: 0.6;
+        }
+
+        @media(max-width: 990px){
+          
+        }
+    }
+
+    .doctor_info {
+        flex: 0.8;
+    }
+}

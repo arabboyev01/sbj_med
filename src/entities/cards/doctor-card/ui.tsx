@@ -16,15 +16,16 @@ type DoctorCardType = {
 const DoctorCard = ({ className, badge, data }: DoctorCardType) => {
   const classes = clsx(styles.card, className);
 
-  const { lang } = Route()
+  const { lang, navigate } = Route()
   const title: string = data?.specialization[0]?.[`title_${lang}` as keyof DoctorSpecialization ] as string
+  const slug: string = data?.slug as string
 
   return (
-    <motion.div className={classes} variants={childAnimation}>
+    <motion.div className={classes} variants={childAnimation} onClick={() => navigate(`/doctors/${slug}`)}>
       <div className={styles.wrapper}>
         <Image
           className={styles.image} //@ts-ignore
-          src={data?.images[0]?.image}
+          src={data?.specialization[0]?.image}          
           alt="Dr. Falonchi"
           width={342}
           height={350}

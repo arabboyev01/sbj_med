@@ -6,9 +6,12 @@ export const Route = () => {
 
     const routes = router.pathname.split('/')
     const pathname: string = routes?.length >= 1 ? routes[1] : ''
+    const navigate  = (route: string) => {
+        router.push(route)
+    }
 
     return {
         lang: currentLanguage,
-        pathname
+        pathname, navigate
     }
 }
