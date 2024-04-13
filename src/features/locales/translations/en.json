@@ -102,7 +102,9 @@
     },
     "doctors": {
         "title":"Шифокорлар",
-        "caption": "Бизнинг шифокорлар жамоаси"
+        "caption": "Бизнинг шифокорлар жамоаси",
+        "about": "About the doctor",
+        "education": "Education"
     },
     "programs": {
         "title":"Дастурлар",

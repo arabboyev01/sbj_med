@@ -9,6 +9,7 @@ export interface DoctorSpecialization {
     desc_ru: string
     desc_en: string
     desc: string
+    image: string
 }
 
 export type DoctorType = {
