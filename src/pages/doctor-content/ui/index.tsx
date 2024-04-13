@@ -40,11 +40,16 @@ const DoctorContent = ({ doctor }: any) => {
             <PaddingWrapper pt={40} />
             <div className="doctor_header">
                 <div className="doctor_image">
-                    <Image src={doctor.specialization[0].image} alt="Dr. Falonchi" width={342} height={350} />
+                    <Image src={doctor.specialization[0].image} alt="Dr. Falonchi" width={342} height={350} className="doctors_image"/>
                 </div>
                 <div className="doctor_info">
                     <h3 className="doctor_name">{first_name} {last_name}</h3>
-                    <p className="doctor_about">{about}</p>
+                    <div className="doctor_position">
+                        {doctor?.specialization?.map((item: DoctorSpecialization) => {
+                            const title: string = item[`title_${lang}` as keyof DoctorSpecialization] as string
+                            return <p className="doctor_about" key={item.id}>{title}</p> 
+                        })}
+                    </div>
                 </div>
             </div>
             <PaddingWrapper pt={40} pb={50}>

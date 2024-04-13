@@ -5,8 +5,10 @@
 .doctor_header {
     display: flex;
     max-width: 1550px;
+    width: 100%;
     margin: 0 auto;
     flex-direction: row;
+
     @media(max-width: 1550px){
         padding-left: 70px;
         padding-right: 30px;
@@ -16,8 +18,17 @@
       flex-direction: column;
       padding-left: 30px;      
     }
+
     .doctor_image {
-        flex: 0.3;
+        border: 1px solid;
+        width: 250px;
+        height: 250px;
+
+        .doctors_image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
 
         @media(max-width: 1550px){
           flex: 0.4;
@@ -33,6 +44,10 @@
     }
 
     .doctor_info {
-        flex: 0.8;
+
+        .doctor_position {
+          display: flex;
+          align-items: center;
+        }
     }
 }
